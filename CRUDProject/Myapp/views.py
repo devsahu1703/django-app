@@ -29,8 +29,3 @@ class StudentAPI(APIView):
             serializer.save()
             return Response({'msg': 'Data is updated'})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    def delete(self, request, id=None):
-        stu = Student.objects.get(id=id)
-        stu.delete()
-        return Response({'msg': 'Data was deleted'})
