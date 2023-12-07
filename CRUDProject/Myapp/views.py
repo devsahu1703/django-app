@@ -29,5 +29,6 @@ class StudentAPI(APIView):
             serializer.save()
             return Response({'msg': 'Data is updated'})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
+
     print("Line aded by somya")
+
